@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun SecondScreen(
+    text: String? = "",
+    number: Int? = 0,
     onClick: () -> Unit,
 ) {
     Column(
@@ -18,6 +20,7 @@ fun SecondScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        Text(text = "$text$number")
         OutlinedButton(onClick = onClick) {
             Text("Back")
         }
