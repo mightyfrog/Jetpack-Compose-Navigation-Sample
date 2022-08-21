@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun MainScreen(
+    text: String? = null,
     onClick: () -> Unit,
 ) {
     Column(
@@ -18,6 +19,9 @@ fun MainScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        if (text != null) {
+            Text(text = text)
+        }
         OutlinedButton(onClick = onClick) {
             Text("Click")
         }
